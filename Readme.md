@@ -19,8 +19,4 @@ Please follow the steps below to use our Python source for social data analysis 
 
 ![image](./src/Figure_1.png)
 
-<div style="text-align: center;">
-
 The result value when the weight is 25.
-
-</div>
