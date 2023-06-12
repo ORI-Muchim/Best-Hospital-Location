@@ -17,4 +17,4 @@ Please follow the steps below to use our Python source for social data analysis 
 3. Run the main.py file with a desired weight argument, i.e., `python main.py {desired weight}`.
 4. Review the resulting output for insights and recommendations on the optimal hospital location.
 
-Your feedback and contributions towards improving this project are most welcome!
+![Weight: 25](./src/Figure_1.png)
