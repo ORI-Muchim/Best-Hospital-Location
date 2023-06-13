@@ -8,6 +8,8 @@ Our inspiration stems from the report "Social Services: Current Status and Polic
 
 In this project, we specifically target the issue of hospital location selection in Jeollanam-do. Our goal is to identify the optimal location for a hospital considering various factors such as population distribution, gender ratio, and the region's topography. We aim to provide a direction for enhancing the hospital infrastructure in Jeollanam-do.
 
+This project was used in the data analysis course for social services.
+
 ## Usage Instructions
 
 Follow the steps below to use our Python source code for social data analysis and hospital location selection:
