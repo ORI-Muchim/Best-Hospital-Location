@@ -6,19 +6,19 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import sys
 
-plt.rc('font', family='Malgun Gothic')
+plt.rc('font', family='AppleGothic')
 
 # 데이터 불러오기
 df = pd.read_csv('terrain_data.csv')
 
 # 가중치 정의
 def calculate_weights(row, coords, pop_weight, car_weight, elderly_rate_weight, gender_ratio_weight):
-    hospital_distance = distance.euclidean([row['Latitude'], row['Longitude']], coords)
+    location = distance.euclidean([row['Latitude'], row['Longitude']], coords)
     population_score = (row['Population'] / df['Population'].max() * pop_weight)**3
     car_count_score = (row['Number_of_Cars'] / df['Number_of_Cars'].max() * car_weight)**3
     elderly_population_score = (row['Elderly_Population_Rate'] / df['Elderly_Population_Rate'].max() * elderly_rate_weight)**3
     gender_ratio_score = (row['Gender_Ratio'] / df['Gender_Ratio'].max() * gender_ratio_weight)**3
-    return hospital_distance / (population_score + car_count_score + elderly_population_score + gender_ratio_score)
+    return location / (population_score + car_count_score + elderly_population_score + gender_ratio_score)
 
 # 병원 위치 결정 함수 정의
 def choose_location(coords, pop_weight, car_weight, elderly_rate_weight, gender_ratio_weight):
